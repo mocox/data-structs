@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 
-function App() {
+import Menu from './containers/menu/menu';
+import About from './containers/about/about';
+
+import packageJson from '../package.json';
+import Home from './containers/home/home';
+
+const routes = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch> 
+      <Route path="/" exact component={Home}/>
+      <Route path="/about" exact component={About}/>
+      <Redirect to="/" />
+    </Switch>
+  )
+}
+
+const App = () => {
+  
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Menu version={packageJson.version} />
+        {routes()}        
+      </div>
+    </BrowserRouter>
   );
 }
 
+
 export default App;
+

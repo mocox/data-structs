@@ -1,0 +1,46 @@
+.Container {
+    padding: 5px;
+    height:44px;
+
+    display: flex;
+    flex-direction: row;
+
+    background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
+}
+
+ul {
+    margin-left:-15px;
+    list-style: none;
+    line-height: 0.5;
+}
+
+li {
+    display: inline-block;
+    padding-right: 15px;
+}
+
+li a {
+    text-decoration: none;
+    color:black;
+}
+
+li a:visited, li a:link {
+    text-decoration: black;
+}
+
+li a:hover {
+    text-decoration: underline;
+    color:white;
+}
+
+.MyActive {
+    color:white;
+}
+
+.SubMenu {
+    display:none;
+}
+
+.SubMenu:hover {
+    display: block;
+}

@@ -1,22 +1,29 @@
 .Container {
     padding: 5px;
-    height:44px;
+    height:30px;
+    padding-bottom: 25px;
 
-    display: flex;
-    flex-direction: row;
+    text-align: left;
 
     background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
 }
 
-ul {
+.Container ul {
     margin-left:-15px;
     list-style: none;
-    line-height: 0.5;
+}
+
+.Container ul li {
+    display: inline-block;    
 }
 
 li {
-    display: inline-block;
     padding-right: 15px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: azure;
 }
 
 li a {
@@ -25,22 +32,51 @@ li a {
 }
 
 li a:visited, li a:link {
-    text-decoration: black;
-}
-
-li a:hover {
-    text-decoration: underline;
-    color:white;
-}
-
-.MyActive {
-    color:white;
+    text-decoration: none;
 }
 
 .SubMenu {
     display:none;
 }
 
-.SubMenu:hover {
+.SubMenu ul li {
     display: block;
+    list-style: none;
+    margin-left:-15px;
+}
+
+.SubMenu ul li:hover {
+    background-color: azure;
+    color:black;
+}
+
+.Container ul li:hover .SubMenu {
+    text-decoration: underline;
+    color:white;
+    display:block;
+    text-align: left;
+
+    position: absolute;
+
+    padding-top:15px;
+    padding-bottom:25px;
+    margin-left:-15px;
+    background-color: #85b2d3;
+}
+
+.Container ul li:hover .SubMenu ul {
+    display:block;
+    margin:10px;
+}
+
+.Container ul li:hover .SubMenu ul li {
+    width:150px;
+    text-align: left;
+    padding:5px;
+    text-decoration: none;
+    color:black;
+}
+
+.MyActive {
+    color:white;
 }

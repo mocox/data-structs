@@ -12,12 +12,12 @@ const MainMenu = (props: any) => {
                 <li>
                     <NavLink to="/" activeClassName={classes.MyActive}>Home</NavLink>
                 </li>
-                <li><span>Algorithms</span>
+                <li>Algorithms
                     <div className={classes.SubMenu}>                    
                         <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+                            <li>One</li>
+                            <li>Two</li>
+                            <li>Three</li>
                         </ul>
                     </div>
                 </li>

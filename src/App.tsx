@@ -10,6 +10,7 @@ import packageJson from '../package.json';
 import Home from './containers/home/home';
 import BigO from './containers/big-o/big-o';
 import Searches from './containers/searches/searches';
+import Sorting from './containers/sorting/sorting';
 
 const routes = () => {
   return (
@@ -17,6 +18,7 @@ const routes = () => {
       <Route path="/" exact component={Home}/>
       <Route path="/big-o" exact component={BigO}/>
       <Route path="/searches/:which" component={Searches} />
+      <Route path="/sorting/:which" component={Sorting} />
       <Route path="/about" exact component={About}/>
       <Redirect to="/" />
     </Switch>

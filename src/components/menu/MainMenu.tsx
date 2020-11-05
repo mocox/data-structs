@@ -30,8 +30,12 @@ const MainMenu = (props: any) => {
                 <li>Sorting
                     <div className={classes.SubMenu}>                    
                         <ul>
-                            <li>Bubble</li>
-                            <li>Selection</li>
+                            <li>
+                                <NavLink to="/sorting/bubble" activeClassName={classes.MyActive}>Bubble Sort</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/sorting/selection" activeClassName={classes.MyActive}>Selection Sort</NavLink>
+                            </li>
                             <li>Insertion</li>
                             <li>Merge</li>
                             <li>Quick</li>

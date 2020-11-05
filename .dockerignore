@@ -1,0 +1,12 @@
+# dependencies
+node_modules
+npm-debug.log
+build
+dist
+**/.vscode
+.dockerignore
+**/.git
+**/.DS_Store
+**/node_modules
+**/dist
+**/build

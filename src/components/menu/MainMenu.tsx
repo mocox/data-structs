@@ -15,22 +15,39 @@ const MainMenu = (props: any) => {
                 <li>
                     <NavLink to="/big-o" activeClassName={classes.MyActive}>Big O</NavLink>
                 </li>
-                
-                <li>Algorithms
+                <li>Searches
                     <div className={classes.SubMenu}>                    
                         <ul>
-                            <li>One</li>
-                            <li>Two</li>
-                            <li>Three</li>
+                            <li>
+                                <NavLink to="/searches?which=linear" activeClassName={classes.MyActive}>Linear Search</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/searches?which=binary" activeClassName={classes.MyActive}>Binary Search</NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Sorting
+                    <div className={classes.SubMenu}>                    
+                        <ul>
+                            <li>Bubble</li>
+                            <li>Selection</li>
+                            <li>Insertion</li>
+                            <li>Merge</li>
+                            <li>Quick</li>
+                            <li>Radix</li>
                         </ul>
                     </div>
                 </li>
                 <li>Data Structures
                     <div className={classes.SubMenu}>
                         <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+                            <li>Singly Linked List</li>
+                            <li>Doubly Linked List</li>
+                            <li><hr /></li>
+                            <li>Stacks &amp; Queues</li>
+                            <li>Search Trees</li>
+                            <li>More ...</li>
                         </ul>
                     </div>
                 </li>

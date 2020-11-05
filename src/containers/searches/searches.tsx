@@ -1,23 +1,22 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
-import Binary from '../../components/searches/binary/binary';
-import Linear from '../../components/searches/linear/linear';
+import Binary from '../../components/searches/binary/binary-search';
+import Linear from '../../components/searches/linear/linear-search';
 
 
 const Searches = (props: any) => {
     
-    const [whichOne, setWhich] = useState('');
+    const [whichOne, setWhichOne] = useState('binary');
     let { which } = useParams<{which: string}>();
 
-    useEffect(() => {
-        setWhich(which);
-    }, [which]);
+    setWhichOne(which);
     
-    console.log('which -> ', which);
+    
     // let { which } = useParams<{which: string}>();
     
     const getWhich = (w: string) => {
-        
+        console.log('which -> ', which);
+
         switch(w) {
             case "linear":
                 return <Linear />
@@ -27,10 +26,10 @@ const Searches = (props: any) => {
     }
 
     return (
-        <Fragment>
-            <p>Which Search: {which}</p>
+        <React.Fragment>
+            <p>Which Search: {whichOne}</p>
             {getWhich(whichOne)}
-        </Fragment>
+        </React.Fragment>
     );
 }
 

@@ -9,14 +9,14 @@ import About from './containers/about/about';
 import packageJson from '../package.json';
 import Home from './containers/home/home';
 import BigO from './containers/big-o/big-o';
-import Searches from './components/searches/linear/linear';
+import Searches from './components/searches/linear/linear-search';
 
 const routes = () => {
   return (
     <Switch> 
       <Route path="/" exact component={Home}/>
       <Route path="/big-o" exact component={BigO}/>
-      <Route path="/searches" component={Searches} />
+      <Route path="/searches/:which" component={Searches} />
       <Route path="/about" exact component={About}/>
       <Redirect to="/" />
     </Switch>

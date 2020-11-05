@@ -19,10 +19,10 @@ const MainMenu = (props: any) => {
                     <div className={classes.SubMenu}>                    
                         <ul>
                             <li>
-                                <NavLink to="/searches?which=linear" activeClassName={classes.MyActive}>Linear Search</NavLink>
+                                <NavLink to="/searches/linear" activeClassName={classes.MyActive}>Linear Search</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/searches?which=binary" activeClassName={classes.MyActive}>Binary Search</NavLink>
+                                <NavLink to="/searches/binary" activeClassName={classes.MyActive}>Binary Search</NavLink>
                             </li>
                         </ul>
                     </div>

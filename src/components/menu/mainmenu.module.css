@@ -18,12 +18,10 @@
 }
 
 li {
-    padding-right: 15px;
+    padding:3px;
+    border-radius: 5px;
+    margin-right: 15px;
     cursor: pointer;
-}
-
-li:hover {
-    background-color: azure;
 }
 
 li a {
@@ -42,11 +40,11 @@ li a:visited, li a:link, .SubMenu li a:visited, .SubMenu li a:link {
 .SubMenu ul li {
     display: block;
     list-style: none;
-    margin-left:-15px;
+    margin-left:-20px;
 }
 
-.SubMenu ul li:hover {
-    background-color: azure;
+li:hover {
+    background-color: rgb(175, 188, 212);
     color:black;
 }
 
@@ -60,7 +58,7 @@ li a:visited, li a:link, .SubMenu li a:visited, .SubMenu li a:link {
 
     padding-top:15px;
     padding-bottom:15px;
-    margin-left:15px;
+    margin-left:-15px;
     background-color: #85b2d3;
 }
 
@@ -79,4 +77,9 @@ li a:visited, li a:link, .SubMenu li a:visited, .SubMenu li a:link {
 
 .MyActive {
     color:white;
+}
+
+.Version {
+    float:right;
+    margin-right: 20px;
 }

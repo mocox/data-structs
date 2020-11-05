@@ -12,6 +12,10 @@ const MainMenu = (props: any) => {
                 <li>
                     <NavLink to="/" activeClassName={classes.MyActive}>Home</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/big-o" activeClassName={classes.MyActive}>Big O</NavLink>
+                </li>
+                
                 <li>Algorithms
                     <div className={classes.SubMenu}>                    
                         <ul>
@@ -34,7 +38,7 @@ const MainMenu = (props: any) => {
                     <NavLink to="/about" activeClassName={classes.MyActive}>About</NavLink>
                 </li>
 
-                <li>{version}</li>
+                <li className={classes.Version}>Version : {version}</li>
             </ul>
         </nav>
     );

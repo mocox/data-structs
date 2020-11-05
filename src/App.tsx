@@ -8,11 +8,13 @@ import About from './containers/about/about';
 
 import packageJson from '../package.json';
 import Home from './containers/home/home';
+import BigO from './containers/big-o/big-o';
 
 const routes = () => {
   return (
     <Switch> 
       <Route path="/" exact component={Home}/>
+      <Route path="/big-o" exact component={BigO}/>
       <Route path="/about" exact component={About}/>
       <Redirect to="/" />
     </Switch>

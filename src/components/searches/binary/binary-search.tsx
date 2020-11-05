@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 
-const Binary = (props: any) => {
+const BinarySearch = () => {
 
    
     return (
@@ -12,4 +12,4 @@ const Binary = (props: any) => {
     );
 }
 
-export default Binary;
+export default BinarySearch;

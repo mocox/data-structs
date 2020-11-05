@@ -9,7 +9,7 @@ import About from './containers/about/about';
 import packageJson from '../package.json';
 import Home from './containers/home/home';
 import BigO from './containers/big-o/big-o';
-import Searches from './components/searches/linear/linear-search';
+import Searches from './containers/searches/searches';
 
 const routes = () => {
   return (

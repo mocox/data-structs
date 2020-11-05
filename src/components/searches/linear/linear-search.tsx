@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 
-const Linear = (props: any) => {
+const LinearSearch = () => {
 
    
     return (
@@ -12,4 +12,4 @@ const Linear = (props: any) => {
     );
 }
 
-export default Linear;
+export default LinearSearch;

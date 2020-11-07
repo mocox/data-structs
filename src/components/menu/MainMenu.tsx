@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 import classes from './mainmenu.module.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSort, faCar } from '@fortawesome/free-solid-svg-icons';
+
 const MainMenu = (props: any) => {
     const version: string = props.version;
     // const mainMenuClasses = [menuClasses.MainMenu, 'navbar-nav mr-auto'].join(' ');
@@ -31,12 +34,16 @@ const MainMenu = (props: any) => {
                     <div className={classes.SubMenu}>                    
                         <ul>
                             <li>
+                                <FontAwesomeIcon className={classes.IconClass} icon={faSort} inverse spin />
                                 <NavLink to="/sorting/bubble" activeClassName={classes.MyActive}>Bubble Sort</NavLink>
                             </li>
                             <li>
+                                <FontAwesomeIcon className={classes.IconClass} icon={faSort} color="green" />
                                 <NavLink to="/sorting/selection" activeClassName={classes.MyActive}>Selection Sort</NavLink>
                             </li>
-                            <li>Insertion</li>
+                            <li>
+                                <FontAwesomeIcon className={classes.IconClass} icon={faCar} color="yellow" />
+                                Insertion</li>
                             <li>Merge</li>
                             <li>Quick</li>
                             <li>Radix</li>

@@ -1,7 +1,8 @@
 .Container {
     padding: 5px;
-    height:30px;
-    padding-bottom: 25px;
+    height:25px;
+    padding-bottom: 15px;
+    margin-top:5px;
 
     text-align: left;
 
@@ -9,8 +10,10 @@
 }
 
 .Container ul {
-    margin-left:-15px;
+
+    margin:5px 5px -15px;
     list-style: none;
+    padding-left:10px;
 }
 
 .Container ul li {
@@ -40,7 +43,7 @@ li a:visited, li a:link, .SubMenu li a:visited, .SubMenu li a:link {
 .SubMenu ul li {
     display: block;
     list-style: none;
-    margin-left:-20px;
+    margin-left:10px;
 }
 
 li:hover {

@@ -10,7 +10,7 @@ const MainMenu = (props: any) => {
         <nav className={classes.Container}>
             <ul className='navbar-nav mr-auto'>
                 <li>
-                    <NavLink to="/" activeClassName={classes.MyActive}>Home</NavLink>
+                    <NavLink to="/" exact activeClassName={classes.MyActive}>Home</NavLink>
                 </li>
                 <li>
                     <NavLink to="/big-o" activeClassName={classes.MyActive}>Big O</NavLink>

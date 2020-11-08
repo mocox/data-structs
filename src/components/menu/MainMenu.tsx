@@ -62,6 +62,16 @@ const MainMenu = (props: any) => {
                         </ul>
                     </div>
                 </li>
+                <li>Profiles
+                    <div className={classes.SubMenu}>
+                        <ul>
+                            <li>
+                                <NavLink to="/profile/mo" activeClassName={classes.MyActive}>Mo</NavLink>
+                            </li>
+                            <li>Vlad</li>
+                        </ul>
+                    </div>
+                </li>
                 <li>
                     <NavLink to="/about" activeClassName={classes.MyActive}>About</NavLink>
                 </li>

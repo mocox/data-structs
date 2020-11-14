@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: molondon/data-structs
 
 on:
   push:
@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag molondon/data-structs:$(date +%s)
+    - name: push docker image
+      run: docker push molondon/data-structs

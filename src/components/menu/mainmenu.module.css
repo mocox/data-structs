@@ -1,92 +1,24 @@
-.Container {
-    padding: 5px;
-    height:45px;
-    padding-bottom: 15px;
+.NavMenu {
+    background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
+    color:white;
+    font-size:1rem;
+}
 
-    text-align: left;
-
+.dropdown-item {
     background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
 }
 
-.Container ul {
-
-    /* margin:5px 5px -15px; */
-    list-style: none;
-    padding-left:10px;
+.Navlink {
+    padding:0.5rem 1rem;
 }
 
-.Container ul li {
-    display: inline-block;    
-}
-
-li {
-    padding:3px;
-    border-radius: 5px;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-li a {
-    text-decoration: none;
-    color:black;
-}
-
-li a:visited, li a:link, .SubMenu li a:visited, .SubMenu li a:link {
-    text-decoration: none;
-}
-
-.SubMenu {
-    display:none;
-}
-
-.SubMenu ul li {
-    display: block;
-    list-style: none;
-    padding-left:20px;
-}
-
-.IconClass {
-    position: relative;
-    left:-15px;
-}
-
-li:hover {
-    background-color: rgb(175, 188, 212);
-    color:black;
-}
-
-.Container ul li:hover .SubMenu {
-    
-    color:white;
-    display:block;
-    text-align: left;
-
-    position: absolute;
-
-    padding-top:15px;
-    padding-bottom:15px;
-    margin-left:-15px;
-    background-color: #85b2d3;
-}
-
-.Container ul li:hover .SubMenu ul {
-    display:block;
-    margin:10px;
-}
-
-.Container ul li:hover .SubMenu ul li {
-    width:150px;
-    text-align: left;
-    padding:5px;
-    text-decoration: none;
-    color:black;
-}
 
 .MyActive {
     color:white;
 }
 
 .Version {
+    color:black;
     float:right;
     margin-right: 20px;
 }

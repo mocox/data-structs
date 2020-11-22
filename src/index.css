@@ -9,6 +9,21 @@ body {
   background-color: aliceblue;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  /* margin:15px 5px; */
+}
+
+h1 {
+  font-style: oblique;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

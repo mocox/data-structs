@@ -6,12 +6,13 @@ import classes from './mainmenu.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faCar } from '@fortawesome/free-solid-svg-icons';
 
+
 const MainMenu = (props: any) => {
     const version: string = props.version;
     // const mainMenuClasses = [menuClasses.MainMenu, 'navbar-nav mr-auto'].join(' ');
     return (
         <nav className={classes.Container}>
-            <ul className='navbar-nav mr-auto'>
+            <ul className=''>
                 <li>
                     <NavLink to="/" exact activeClassName={classes.MyActive}>Home</NavLink>
                 </li>

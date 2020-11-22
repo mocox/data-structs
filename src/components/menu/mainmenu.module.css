@@ -1,6 +1,6 @@
 .Container {
     padding: 5px;
-    height:25px;
+    height:45px;
     padding-bottom: 15px;
 
     text-align: left;
@@ -10,7 +10,7 @@
 
 .Container ul {
 
-    margin:5px 5px -15px;
+    /* margin:5px 5px -15px; */
     list-style: none;
     padding-left:10px;
 }

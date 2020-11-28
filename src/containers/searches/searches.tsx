@@ -22,16 +22,10 @@ const Searches = () => {
 
     return (
         <Fragment>
-            <div className="row">
-                <div className="col-6">
-                    <p>Which Search: <em>{which}</em></p>
-                    {getWhich(which)}
-                </div>
-                <div className="col-4">
-                    <About />
-                    <Home />
-                </div>
-            </div>
+            
+            <p>Which Search: <em>{which}</em></p>
+            {getWhich(which)}
+               
         </Fragment>
     );
 }

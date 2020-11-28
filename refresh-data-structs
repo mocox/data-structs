@@ -1,0 +1,20 @@
+#! /usr/bin/env bash
+
+echo "param 1 -> " $1
+# sudo docker rmi molondon/data-structs
+if [ $1 != 'pull' ]
+ then 
+	# build the image
+	sudo docker build -t molondon/data-structs .
+else
+	sudo docker pull molondon/data-structs
+fi
+
+# remove container
+sudo docker rm -f data-structs
+
+# create the new container
+sudo docker run -dit -p 8090:80 --name data-structs molondon/data-structs
+
+# prune images
+sudo docker image prune

@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import { NavLink } from 'react-router-dom';
 
+import classes from './home.module.css';
+
 const urlName = "learnthis.rocks";
 
 const HomePage = () => {
@@ -9,7 +11,7 @@ const HomePage = () => {
     return (
 
         <Fragment>
-            <Jumbotron fluid>
+            <Jumbotron fluid className={classes.HeaderTron}>
                 <h1>Welcome to <span className="url-name">{urlName}</span> Data Structures</h1>
                 <p>
                     A website created by <NavLink to="/profile/mo">Mo Cox</NavLink> and <em>Vlad Chelyadin</em>.

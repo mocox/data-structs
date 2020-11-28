@@ -16,9 +16,14 @@ const MainMenu = (props: any) => {
             <Nav.Item  className={classes.Navlink}>
                 <NavLink to="/" exact activeClassName={classes.MyActive}>Home</NavLink>
             </Nav.Item>
-            <Nav.Item  className={classes.Navlink}>
+            <NavDropdown title="Intros" id="intros-dropdown">
+                <NavDropdown.Item>
                 <NavLink to="/big-o" activeClassName={classes.MyActive}>Big O</NavLink>
-            </Nav.Item>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                    <NavLink to="/Logarithms" activeClassName={classes.MyActive}>Log<sub>2</sub>N</NavLink>
+                </NavDropdown.Item>
+            </NavDropdown>
             <NavDropdown title="Searches" id="searches-dropdown">
                 <NavDropdown.Item>
                     <NavLink to="/searches/linear" activeClassName={classes.MyActive}>Linear Search</NavLink>
@@ -26,7 +31,7 @@ const MainMenu = (props: any) => {
                 <NavDropdown.Item>
                     <NavLink to="/searches/binary" activeClassName={classes.MyActive}>Binary Search</NavLink>
                 </NavDropdown.Item>
-                </NavDropdown>
+            </NavDropdown>
             <NavDropdown title="Sorting" id="sorting-dropdown">
                 <NavDropdown.Item>
                     <FontAwesomeIcon className={classes.IconClass} icon={faSort} inverse spin />

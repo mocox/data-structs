@@ -63,7 +63,7 @@ const MainMenu = (props: any) => {
                 <NavLink to="/profile/mo" activeClassName={classes.MyActive}>Mo</NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                <NavLink to="/profile/mo" activeClassName={classes.MyActive}>Vlad</NavLink>
+                <NavLink to="/profile/vlad" activeClassName={classes.MyActive}>Vlad</NavLink>
                 </NavDropdown.Item>
             </NavDropdown>
             <Nav.Item  className={classes.Navlink}>

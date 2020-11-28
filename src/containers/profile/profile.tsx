@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { useParams } from 'react-router-dom';
 import MoProfile from '../../components/profile/mo';
+import VladProfile from '../../components/profile/vlad';
 
 
 const Profile = () => {
@@ -13,7 +14,7 @@ const Profile = () => {
             case "mo":
                 return <MoProfile />
             case "vlad":
-                return <h2>TODO VLAD</h2>
+                return <VladProfile />
         }
     }
 

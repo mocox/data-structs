@@ -38,12 +38,15 @@ const App = () => {
                     {routes()}  
                 </div>
                 <div className="col-3 right-panel">
+                    {/* change to component */}
                     <h2>Links</h2>
                     <ul>
                       <li>                        
                         <a href="https://github.com/mocox/data-structs" rel="noreferrer" target="_blank">Our github page.</a>
                       </li>
-                      <li>Link2</li>
+                      <li>
+                        <a href="https://visualgo.net/" rel="noreferrer" target="_blank">Visual Examples</a>
+                      </li>
                       <li>Link3</li>
                     </ul>
                 </div>

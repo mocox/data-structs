@@ -1,6 +1,6 @@
 .App {
   text-align: justify;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .App-link {
@@ -34,3 +34,18 @@
   margin-right: 0;
 }
 
+
+.pageTron {
+  background-color: lightskyblue;
+  border-color: skyblue;
+  padding-left:20px;
+  padding-top:10px;
+
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  height:150px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px -1px 5px 0px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 1px -1px 5px 0px rgba(0,0,0,0);
+}

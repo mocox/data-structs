@@ -23,6 +23,7 @@
 .right-panel {
   border-left: 1px solid lightblue;
   padding-top:15px;
+  font-size: 1rem;
 }
 
 .right-panel ul li{

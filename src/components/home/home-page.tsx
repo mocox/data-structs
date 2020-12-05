@@ -4,6 +4,9 @@ import { NavLink } from 'react-router-dom';
 
 import classes from './home.module.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 const urlName = "learnthis.rocks";
 
 const HomePage = () => {
@@ -22,12 +25,23 @@ const HomePage = () => {
                 </p>
             </Jumbotron>
             
-            <div className="container">
-                <h2>Data Structures</h2>
+            <div className={classes.Container}>
+                <h2>Algoritms and Data Structures in Computing</h2>
+                <div className={classes.SubHeader}>
+                    <FontAwesomeIcon className={classes.IconClass} icon={faBook} color="turquoise" />
+                    Introduction
+                </div>
                 <p>
                     This is a site for those who want to learn more about data structures in regard to data science.
-                    Everything is free, so enjoy!!!
+                    It is an open source project and can be found on github. It is written and designed by Mo and Vlad.
+                    Mo is from London and is a developer with over 20 years experience and Vlad is a student engineer in St Petersburg, Russia
                 </p>
+                <p>
+                Everything is free, so enjoy!!!
+                </p>
+                <div className={classes.SubHeader}>
+                    <FontAwesomeIcon className={classes.IconClass} icon={faGlobe} color="turquoise" />
+                    Overview</div>
                 <p>
                     The site will try to explain the following
                     <ul>

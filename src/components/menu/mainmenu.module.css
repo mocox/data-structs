@@ -4,21 +4,24 @@
     font-size:1rem;
 }
 
+.NavMenu a {
+    color:black;
+}
+
 .dropdown-item {
     background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
 }
 
 .Navlink {
-    padding:0.5rem 1rem;
+    padding:0.5rem 1rem; 
 }
 
 .IconClass {
     margin-right:8px;
 }
 
-
 .MyActive {
-    color:black;
+    color:blue!important;
 }
 
 .Version {

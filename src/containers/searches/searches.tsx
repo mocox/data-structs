@@ -2,8 +2,7 @@ import React, { Fragment } from 'react'
 import { useParams } from 'react-router-dom';
 import BinarySearch from '../../components/searches/binary/binary-search';
 import LinearSearch from '../../components/searches/linear/linear-search';
-import About from '../about/about';
-import Home from '../home/home';
+
 
 
 const Searches = () => {

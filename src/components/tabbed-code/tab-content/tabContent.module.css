@@ -1,0 +1,11 @@
+.Content {
+    padding: 15px 20px;
+    background-color: white;
+    min-height:270px;
+    border-bottom-right-radius: 12px;
+}
+
+code{
+    direction: ltr;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}

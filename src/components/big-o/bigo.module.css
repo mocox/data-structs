@@ -1,4 +1,10 @@
 
+.Container {
+    margin: 8px 125px;
+}
+
+
 .BigoImgContainer {
     text-align: center;
+    margin-top: 50px;
 }

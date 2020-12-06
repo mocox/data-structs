@@ -22,10 +22,7 @@ const Searches = () => {
 
     return (
         <Fragment>
-            
-            <p>Which Search: <em>{which}</em></p>
             {getWhich(which)}
-               
         </Fragment>
     );
 }

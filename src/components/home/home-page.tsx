@@ -27,8 +27,8 @@ const HomePage = () => {
             
             <div className={classes.Container}>
                 <h2>Algoritms and Data Structures in Computing</h2>
-                <div className={classes.SubHeader}>
-                    <FontAwesomeIcon className={classes.IconClass} icon={faBook} color="turquoise" />
+                <div className="subHeader">
+                    <FontAwesomeIcon className="iconClass" icon={faBook} color="turquoise" />
                     Introduction
                 </div>
                 <p>
@@ -40,7 +40,7 @@ const HomePage = () => {
                 Everything is free, so enjoy!!!
                 </p>
                 <div className={classes.SubHeader}>
-                    <FontAwesomeIcon className={classes.IconClass} icon={faGlobe} color="turquoise" />
+                    <FontAwesomeIcon className="iconClass" icon={faGlobe} color="turquoise" />
                     Overview</div>
                 <p>
                     The site will try to explain the following

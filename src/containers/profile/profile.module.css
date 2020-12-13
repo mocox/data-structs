@@ -1,15 +1,26 @@
 .Profiles {
     margin: 20px 5px 20px 5px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .ProfileCard {
-    min-height: 600px;
     border-bottom: 1px solid lightgrey; 
     border-right: 1px solid lightgrey;
     box-shadow: 5px 5px 1px darkgray;
 
-    min-height:300px;
     border-bottom-right-radius: 12px;
+    transition: all 1s;
+
+    max-width: 300px;
+}
+
+.ProfileCard:hover {
+    transform: scale(1.1);
+}
+
+.ImgStyle {
+    max-height: 500px;
+    max-width: 400px;
 }

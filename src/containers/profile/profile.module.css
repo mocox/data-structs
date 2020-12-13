@@ -1,0 +1,15 @@
+.Profiles {
+    margin: 20px 5px 20px 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ProfileCard {
+    min-height: 600px;
+    border-bottom: 1px solid lightgrey; 
+    border-right: 1px solid lightgrey;
+    box-shadow: 5px 5px 1px darkgray;
+
+    min-height:300px;
+    border-bottom-right-radius: 12px;
+}

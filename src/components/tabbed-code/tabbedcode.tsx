@@ -9,7 +9,7 @@ const TabbedCode = (props: any) => {
         <Fragment>
             {/* <h5>Tabbed Code Component - {props.message}</h5> */}
             <div className={classes.TabContainer}>
-                <Tabs defaultActiveKey="profile" id="code-holder">
+                <Tabs defaultActiveKey="c#" id="code-holder">
                     <Tab eventKey='c#' title='C#'>
                         <TabContent code="public void Get(string str)  { }" />
                     </Tab>

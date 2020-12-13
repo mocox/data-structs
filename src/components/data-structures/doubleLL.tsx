@@ -5,15 +5,15 @@ import TabbedCode from '../tabbed-code/tabbedcode';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faCode } from '@fortawesome/free-solid-svg-icons';
 
-import classes from './sorting.module.css';
+import classes from './data-struct.module.css';
 
-const BubbleSort = () => {
+const DoubleLL = () => {
 
 
     return (
         <Fragment>     
             <Jumbotron fluid className="pageTron">
-                <h1>Bubble Sort</h1>
+                <h1>Double Linked List</h1>
                 <p>Description here!</p>
                 <p>
                     <strong>We are still under construction so please be patient.</strong>
@@ -37,4 +37,4 @@ const BubbleSort = () => {
     );
 }
 
-export default BubbleSort;
+export default DoubleLL;

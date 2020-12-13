@@ -43,34 +43,37 @@ const MainMenu = (props: any) => {
                 </NavDropdown.Item>
                 <NavDropdown.Item>
                     <FontAwesomeIcon className={classes.IconClass} icon={faCar} color="yellow" />
-                    Insertion
+                    <NavLink to="/sorting/insertion" activeClassName={classes.MyActive}>Insertion Sort</NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                    Merge
+                    <NavLink to="/sorting/merge" activeClassName={classes.MyActive}>Merge Sort</NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                    Quick
+                    <NavLink to="/sorting/quick" activeClassName={classes.MyActive}>Quick Sort</NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                    Radix
+                    <NavLink to="/sorting/radix" activeClassName={classes.MyActive}>Radix Sort</NavLink>
                 </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Data Structures" id="structs-dropdown">
                 <NavDropdown.Item>
-                    Single Linked
+                    <NavLink to="/data-structures/singleLL" activeClassName={classes.MyActive}>Single Linked List</NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                    Double Linked
+                    <NavLink to="/data-structures/doubleLL" activeClassName={classes.MyActive}>Double Linked List</NavLink>
                 </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Profiles" id="profiles-dropdown">
+            {/* <NavDropdown title="Profiles" id="profiles-dropdown">
                 <NavDropdown.Item>
                 <NavLink to="/profile/mo" activeClassName={classes.MyActive}>Mo</NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
                 <NavLink to="/profile/vlad" activeClassName={classes.MyActive}>Vlad</NavLink>
                 </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
+            <Nav.Item  className={classes.Navlink}>
+                <NavLink to="/profile" activeClassName={classes.MyActive}>Profiles</NavLink>
+            </Nav.Item>
             <Nav.Item  className={classes.Navlink}>
                 <NavLink to="/about" activeClassName={classes.MyActive}>About</NavLink>
             </Nav.Item>

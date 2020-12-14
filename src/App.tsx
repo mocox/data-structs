@@ -11,7 +11,9 @@ import Home from './containers/home/home';
 import BigO from './containers/big-o/big-o';
 import Searches from './containers/searches/searches';
 import Sorting from './containers/sorting/sorting';
+import DataStructures from './containers/data-structures/data-structures';
 import Profile from './containers/profile/profile';
+
 
 const routes = () => {
   return (
@@ -20,7 +22,8 @@ const routes = () => {
       <Route path="/big-o" exact component={BigO}/>
       <Route path="/searches/:which" component={Searches} />
       <Route path="/sorting/:which" component={Sorting} />
-      <Route path="/profile/:which" component={Profile} />
+      <Route path="/data-structures/:which" component={DataStructures}/>
+      <Route path="/profile" exact component={Profile} />
       <Route path="/about" exact component={About}/>
       <Redirect to="/" />
     </Switch>

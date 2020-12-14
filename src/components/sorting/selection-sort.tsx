@@ -7,18 +7,18 @@ import { faBook, faCode } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './sorting.module.css';
 
-const BubbleSort = () => {
+const SelectionSort = () => {
 
 
     return (
         <Fragment>     
             <Jumbotron fluid className="pageTron">
-                <h1>Bubble Sort</h1>
+                <h1>Selection Sort</h1>
                 <p>Description here!</p>
                 <p>
                     <strong>We are still under construction so please be patient.</strong>
                 </p>
-            </Jumbotron> 
+            </Jumbotron>    
             <div className={classes.Container}>
                 <div className="subHeader">
                     <FontAwesomeIcon className="iconClass" icon={faBook} color="turquoise" />
@@ -32,9 +32,10 @@ const BubbleSort = () => {
                 </div>
                 <TabbedCode message="Linear code" />
             </div>   
+            
         </Fragment>
 
     );
 }
 
-export default BubbleSort;
+export default SelectionSort;

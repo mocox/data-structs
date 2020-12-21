@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
+
 import './App.css';
 
 import Menu from './containers/menu/menu';
@@ -31,7 +32,7 @@ const routes = () => {
 }
 
 const App = () => {
-  
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -54,7 +55,6 @@ const App = () => {
                     </ul>
                 </div>
             </div>
-              
       </div>
     </BrowserRouter>
   );

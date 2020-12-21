@@ -2,7 +2,6 @@
 .MenuContainer {
     position: fixed;
     top:0;
-
     height:50px;
 
     background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);

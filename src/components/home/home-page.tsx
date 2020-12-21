@@ -15,14 +15,16 @@ const HomePage = () => {
 
         <Fragment>
             <Jumbotron fluid className={classes.HeaderTron}>
-                <h1>Welcome to <span className="url-name">{urlName}</span> Data Structures</h1>
-                <p>
-                    A website created by <NavLink to="/profile/mo">Mo Cox</NavLink> and <em>Vlad Chelyadin</em>.
-                    A cooperation between London, UK and Saint Petersburg, Russia.
-                </p>
-                <p>
-                    <strong>We are still under construction so please be patient.</strong>
-                </p>
+                <div className={classes.HeaderContainer}>
+                    <h1>Welcome to <span className="url-name">{urlName}</span> Data Structures</h1>
+                    <p>
+                        A website created by <NavLink to="/profile/mo">Mo Cox</NavLink> and <em>Vlad Chelyadin</em>.
+                        A cooperation between London, UK and Saint Petersburg, Russia.
+                    </p>
+                    <p>
+                        <strong>We are still under construction so please be patient.</strong>
+                    </p>
+                </div>
             </Jumbotron>
             
             <div className={classes.Container}>

@@ -2,8 +2,7 @@
     border-bottom: 1px solid lightgrey; 
     border-right: 1px solid lightgrey;
     box-shadow: 5px 5px 1px darkgray;
-
-    border-bottom-right-radius: 12px;
+    background: linear-gradient(90deg, lightskyblue 0%, #85b2d3 35%, rgb(236, 239, 240) 100%);
     transition: all 1s;
 
     /* max-width: 300px; */
@@ -16,4 +15,12 @@
 .ImgStyle {
     max-height: 300px;
     max-width: 300px;
+    align-self: center;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.HeaderFooterStyle {
+    color: beige;
+    background: linear-gradient(90deg, rgb(103, 159, 194) 0%, #6c90aa 35%, rgb(172, 175, 175) 100%);
 }

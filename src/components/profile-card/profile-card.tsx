@@ -4,6 +4,7 @@ import { Card } from 'react-bootstrap';
 import classes from './profilecard.module.css';
 
 export interface IProfileCard {
+    header: string;
     imgSrc: string;
     title: string;
     cardText:string;
@@ -14,6 +15,7 @@ const ProfileCard = (props: IProfileCard) => {
 
     return (
         <Card className={classes.ProfileCard}>
+            <Card.Header className={classes.HeaderFooterStyle}>{props.header}</Card.Header>
             <Card.Img className={classes.ImgStyle} variant="top" src={props.imgSrc} />
             <Card.Body>
             <Card.Title>{props.title}</Card.Title>
@@ -21,8 +23,8 @@ const ProfileCard = (props: IProfileCard) => {
                 {props.cardText}
             </Card.Text>
             </Card.Body>
-            <Card.Footer>
-                <small className="text-muted">{props.footerText}</small>
+            <Card.Footer className={classes.HeaderFooterStyle}>
+                <small>{props.footerText}</small>
             </Card.Footer>
         </Card>
     );

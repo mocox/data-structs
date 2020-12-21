@@ -1,86 +1,45 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-
-import { Nav, NavDropdown} from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown} from 'react-bootstrap';
 
 import classes from './mainmenu.module.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSort, faCar } from '@fortawesome/free-solid-svg-icons';
-
 const MainMenu = (props: any) => {
     const version: string = props.version;
-    // const mainMenuClasses = [menuClasses.MainMenu, 'navbar-nav mr-auto'].join(' ');
+
     return (
-        <Nav className={classes.NavMenu} variant="pills" activeKey="1">
-            <Nav.Item  className={classes.Navlink}>
-                <NavLink to="/" exact activeClassName={classes.MyActive}>Home</NavLink>
-            </Nav.Item>
-            <NavDropdown title="Intros" id="intros-dropdown">
-                <NavDropdown.Item>
-                <NavLink to="/big-o" activeClassName={classes.MyActive}>Big O</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                    <NavLink to="/Logarithms" activeClassName={classes.MyActive}>Log<sub>2</sub>N</NavLink>
-                </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Searches" id="searches-dropdown">
-                <NavDropdown.Item>
-                    <NavLink to="/searches/linear" activeClassName={classes.MyActive}>Linear Search</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                    <NavLink to="/searches/binary" activeClassName={classes.MyActive}>Binary Search</NavLink>
-                </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Sorting" id="sorting-dropdown">
-                <NavDropdown.Item>
-                    <FontAwesomeIcon className={classes.IconClass} icon={faSort} inverse spin />
-                    <NavLink to="/sorting/bubble" activeClassName={classes.MyActive}>Bubble Sort</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                    <FontAwesomeIcon className={classes.IconClass} icon={faSort} color="green" />
-                    <NavLink to="/sorting/selection" activeClassName={classes.MyActive}>Selection Sort</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                    <FontAwesomeIcon className={classes.IconClass} icon={faCar} color="yellow" />
-                    <NavLink to="/sorting/insertion" activeClassName={classes.MyActive}>Insertion Sort</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                    <NavLink to="/sorting/merge" activeClassName={classes.MyActive}>Merge Sort</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                    <NavLink to="/sorting/quick" activeClassName={classes.MyActive}>Quick Sort</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                    <NavLink to="/sorting/radix" activeClassName={classes.MyActive}>Radix Sort</NavLink>
-                </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Data Structures" id="structs-dropdown">
-                <NavDropdown.Item>
-                    <NavLink to="/data-structures/singleLL" activeClassName={classes.MyActive}>Single Linked List</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                    <NavLink to="/data-structures/doubleLL" activeClassName={classes.MyActive}>Double Linked List</NavLink>
-                </NavDropdown.Item>
-            </NavDropdown>
-            {/* <NavDropdown title="Profiles" id="profiles-dropdown">
-                <NavDropdown.Item>
-                <NavLink to="/profile/mo" activeClassName={classes.MyActive}>Mo</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                <NavLink to="/profile/vlad" activeClassName={classes.MyActive}>Vlad</NavLink>
-                </NavDropdown.Item>
-            </NavDropdown> */}
-            <Nav.Item  className={classes.Navlink}>
-                <NavLink to="/profile" activeClassName={classes.MyActive}>Profiles</NavLink>
-            </Nav.Item>
-            <Nav.Item  className={classes.Navlink}>
-                <NavLink to="/about" activeClassName={classes.MyActive}>About</NavLink>
-            </Nav.Item>
-            <Nav.Item className={classes.Navlink}>
-                <span className={classes.Version}>Version : {version}</span>
-            </Nav.Item>
-        </Nav>
+        <Navbar collapseOnSelect expand="lg" className={classes.menu}>
+            <Navbar.Brand href="/home">Home</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
+                <NavDropdown title="Intros" id="intros-dropdown">
+                    <NavDropdown.Item href="/big-o">Big O</NavDropdown.Item>
+                    <NavDropdown.Item href="/Logarithms">Log<sub>2</sub>N</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Searches" id="searches-dropdown">
+                    <NavDropdown.Item href="/searches/linear">Linear Search</NavDropdown.Item>
+                    <NavDropdown.Item href="/searches/binary">Binary Search</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Sorting" id="sorting-dropdown">
+                    <NavDropdown.Item href="/sorting/bubble">Bubble Sort</NavDropdown.Item>
+                    <NavDropdown.Item href="/sorting/selection">Selection Sort</NavDropdown.Item>
+                    <NavDropdown.Item href="/sorting/insertion">Insertion Sort</NavDropdown.Item>
+                    <NavDropdown.Item href="/sorting/merge">Merge Sort</NavDropdown.Item>
+                    <NavDropdown.Item href="/sorting/quick">Quick Sort</NavDropdown.Item>
+                    <NavDropdown.Item href="/sorting/radix">Radix Sort</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Data Structures" id="structs-dropdown">
+                    <NavDropdown.Item href="/data-structures/singleLL">Single Linked List</NavDropdown.Item>
+                    <NavDropdown.Item href="/data-structures/doubleLL">Double Linked List</NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link href="/profile">Profile</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
+                </Nav>
+                <Nav>
+                    <span className={classes.Version}>Version : {version}</span>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 }
 

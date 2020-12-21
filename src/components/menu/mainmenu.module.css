@@ -1,31 +1,10 @@
-.NavMenu {
-    background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
-    color:white;
-    font-size:1rem;
-}
-
-.NavMenu a {
-    color:black;
-}
-
-.dropdown-item {
-    background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
-}
-
-.Navlink {
-    padding:0.5rem 1rem; 
-}
-
-.IconClass {
-    margin-right:8px;
-}
-
-.MyActive {
-    color:blue!important;
-}
-
 .Version {
-    color:black;
-    float:right;
-    margin-right: 20px;
+    color: aliceblue;
+    font-size: large;
+}
+
+.menu {
+    background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
+    font-size: large;
+    width: 100%;
 }

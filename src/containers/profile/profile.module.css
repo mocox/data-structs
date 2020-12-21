@@ -4,3 +4,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.jumbotron {
+    border-bottom: 1px solid lightgrey; 
+    border-right: 1px solid lightgrey;
+    box-shadow: 5px 5px 1px darkgray;
+    background-color: rgb(15, 207, 255);
+    border-bottom-right-radius: 12px;
+}

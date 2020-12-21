@@ -10,10 +10,19 @@
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px -1px 5px 0px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 1px -1px 5px 0px rgba(0,0,0,0);
 }
-
+.HeaderCOntainer {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    padding: 10px;
+}
 .Container {
     text-align: left;
-    padding:10px;
+    margin-left: 10%;
+    width: 80%; /* Ширина слоя */
+    /* background: #fc0; */
+    padding: 10px;
 }
 
 .SubHeader {

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import BigoImg from '../../images/big-o.png';
+import BigoImg from '../../../images/big-o.png';
 
 import classes from './bigo.module.css';
 

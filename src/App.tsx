@@ -23,7 +23,7 @@ const routes = () => {
       <Route path="/big-o" exact component={BigO}/>
       <Route path="/searches/:which" component={Searches} />
       <Route path="/sorting/:which" component={Sorting} />
-      <Route path="/data-structures/:which" component={DataStructures}/>
+      <Route path="/data-structures/:which" component={DataStructures} />
       <Route path="/profile" exact component={Profile} />
       <Route path="/about" exact component={About}/>
       <Redirect to="/" />

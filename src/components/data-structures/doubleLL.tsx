@@ -12,12 +12,14 @@ const DoubleLL = () => {
 
     return (
         <Fragment>     
-            <Jumbotron fluid className="pageTron">
-                <h1>Double Linked List</h1>
-                <p>Description here!</p>
-                <p>
-                    <strong>We are still under construction so please be patient.</strong>
-                </p>
+            <Jumbotron fluid className={classes.HeaderTron}>
+                <div className={classes.HeaderContainer}>
+                    <h1>Double Linked List</h1>
+                    <p>Description here!</p>
+                    <p>
+                        <strong>We are still under construction so please be patient.</strong>
+                    </p>
+                </div>
             </Jumbotron> 
             <div className={classes.Container}>
                 <div className="subHeader">

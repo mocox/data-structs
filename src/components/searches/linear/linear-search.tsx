@@ -10,14 +10,15 @@ import classes from '../linear.module.css';
 const LinearSearch = () => {
     return (
         <Fragment>
-            <Jumbotron fluid className="pageTron">
-                <h1>Linear Searches</h1>
-                <p>Description here!</p>
-                <p>
-                    <strong>We are still under construction so please be patient.</strong>
-                </p>
+            <Jumbotron fluid className={classes.HeaderTron}>
+                <div className={classes.HeaderContainer}>
+                    <h1>Linear Searches</h1>
+                    <p>Description here!</p>
+                    <p>
+                        <strong>We are still under construction so please be patient.</strong>
+                    </p>
+                </div>
             </Jumbotron>            
-            <h2>Linear Searches</h2>
             <div className={classes.Container}>
                 <div className="subHeader">
                     <FontAwesomeIcon className="iconClass" icon={faBook} color="turquoise" />

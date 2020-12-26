@@ -1,3 +1,7 @@
 .Container {
-    margin: 8px 125px;
+    text-align: left;
+    margin-left: 10%;
+    width: 80%; /* Ширина слоя */
+    /* background: #fc0; */
+    padding: 10px;
 }

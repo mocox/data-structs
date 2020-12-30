@@ -36,12 +36,14 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
+        
         <Menu version={packageJson.version} />
-        <div className="row row-fix">
-                <div className="col-9">
+
+        <div className="body-container">
+                <div className="left-panel">
                     {routes()}  
                 </div>
-                <div className="col-3 right-panel">
+                <div className="right-panel">
                     {/* change to component */}
                     <h2>Links</h2>
                     <ul>

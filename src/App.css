@@ -16,16 +16,9 @@
   }
 }
 
-@media screen and (min-width: 600px) {
-  .dropdown-menu {
-    top:50px !important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-
-    box-shadow: 5px 5px 2px gray;
-  }
+.body-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .url-name {
@@ -37,6 +30,7 @@
   padding-top:15px;
   font-size: 1rem;
 }
+
 
 .right-panel ul li{
   list-style: none;
@@ -51,7 +45,8 @@
 .pageTron {
   background-color: lightskyblue;
   border-color: skyblue;
-  padding-left:20px;
+  padding-left:10px;
+  padding-right:10px;
   padding-top:10px;
 
   border-bottom-right-radius: 10px;
@@ -74,4 +69,35 @@
 
 .iconClass {
   margin-right:8px;
+}
+
+@media screen and (min-width: 600px) {
+
+  .body-container {
+    flex-direction: row;
+  }
+
+  .rigth-panel {
+    width: 25vw;
+  }
+
+  .left-panel {
+    width: 75vw;
+  }
+
+  .pageTron {
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+  }
+
+  .dropdown-menu {
+    top:50px !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    box-shadow: 5px 5px 2px gray;
+  }
 }

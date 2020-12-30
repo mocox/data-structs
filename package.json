@@ -1,6 +1,6 @@
 {
   "name": "data-structures",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",

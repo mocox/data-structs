@@ -9,7 +9,7 @@ import About from './containers/about/about';
 
 import packageJson from '../package.json';
 import Home from './containers/home/home';
-import BigO from './containers/big-o/big-o';
+import Intros from './containers/intros/intros';
 import Searches from './containers/searches/searches';
 import Sorting from './containers/sorting/sorting';
 import DataStructures from './containers/data-structures/data-structures';
@@ -20,7 +20,7 @@ const routes = () => {
   return (
     <Switch> 
       <Route path="/" exact component={Home}/>
-      <Route path="/big-o" exact component={BigO}/>
+      <Route path="/intros/:which" exact component={Intros}/>
       <Route path="/searches/:which" component={Searches} />
       <Route path="/sorting/:which" component={Sorting} />
       <Route path="/data-structures/:which" component={DataStructures}/>

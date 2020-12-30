@@ -16,6 +16,18 @@
   }
 }
 
+@media screen and (min-width: 600px) {
+  .dropdown-menu {
+    top:50px !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    box-shadow: 5px 5px 2px gray;
+  }
+}
+
 .url-name {
   color:blue;
 }

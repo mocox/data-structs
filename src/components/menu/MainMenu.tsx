@@ -12,7 +12,7 @@ const MainMenu = (props: any) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                <NavDropdown title="Intros" id="intros-dropdown">
+                <NavDropdown title="Intros" id="intros-dropdown" className={classes.DropdownContainer}>
                     <NavDropdown.Item href="/intros/big-o">Big O</NavDropdown.Item>
                     <NavDropdown.Item href="/intros/logarithms">Log<sub>2</sub>N</NavDropdown.Item>
                 </NavDropdown>

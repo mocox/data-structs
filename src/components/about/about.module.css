@@ -1,0 +1,8 @@
+.BodyStyle {
+    background: linear-gradient(90deg, lightskyblue 0%, #85b2d3 35%, rgb(236, 239, 240) 100%);
+}
+
+.HeaderFooterStyle {
+    color: beige;
+    background: linear-gradient(90deg, rgb(103, 159, 194) 0%, #6c90aa 35%, rgb(172, 175, 175) 100%);
+}

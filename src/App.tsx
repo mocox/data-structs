@@ -5,7 +5,6 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Menu from './containers/menu/menu';
-import About from './containers/about/about';
 
 import packageJson from '../package.json';
 import Home from './containers/home/home';
@@ -25,7 +24,6 @@ const routes = () => {
       <Route path="/sorting/:which" component={Sorting} />
       <Route path="/data-structures/:which" component={DataStructures}/>
       <Route path="/profile" exact component={Profile} />
-      <Route path="/about" exact component={About}/>
       <Redirect to="/" />
     </Switch>
   )

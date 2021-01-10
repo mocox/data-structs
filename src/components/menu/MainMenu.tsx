@@ -5,8 +5,11 @@ import { Nav, Navbar, NavDropdown} from 'react-bootstrap';
 
 import classes from './mainmenu.module.css';
 
+import About from '../about/about';
+
 const MainMenu = (props: any) => {
     const version: string = props.version;
+    const [modalShow, setModalShow] = React.useState(false);
 
     return (
         <Navbar collapseOnSelect expand="lg" className={classes.menu}>
@@ -35,13 +38,21 @@ const MainMenu = (props: any) => {
                     <NavDropdown.Item as={NavLink} to="/data-structures/doubleLL">Double Linked List</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link as={NavLink} to="/profile">Profile</Nav.Link>
-                <Nav.Link as={NavLink} to="/about">About</Nav.Link>
+                <Nav.Link onClick={() => setModalShow(true)}>About</Nav.Link>
                 </Nav>
                 <Nav>
                     <span className={classes.Version}>Version : {version}</span>
                 </Nav>
             </Navbar.Collapse>
+
+            <About
+                show={modalShow}
+                Version={version}
+                onHide={() => setModalShow(false)}
+            />
+
         </Navbar>
+        
     );
 }
 

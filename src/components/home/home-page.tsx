@@ -45,7 +45,8 @@ const HomePage = () => {
                     <FontAwesomeIcon className="iconClass" icon={faGlobe} color="turquoise" />
                     Overview</div>
                 <p>
-                    The site will try to explain the following
+                    The site will try to explain the following 
+                </p>
                     <ul>
                         <li>
                             Big-O notation, what it is and how to interpret it from code.
@@ -58,7 +59,7 @@ const HomePage = () => {
                         </li>
                         <li>We will be using some visualisation too from other useful sites.</li>
                     </ul>                     
-                </p>  
+                
                 <p>
                     If you wish to contribute then get in touch via the <a href="https://github.com/mocox/data-structs">github page.</a> 
                 </p>              

@@ -1,0 +1,8 @@
+.BodyStyle {
+    background: aliceblue;
+}
+
+.HeaderFooterStyle {
+    color: beige;
+    background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
+}

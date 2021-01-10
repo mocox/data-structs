@@ -8,22 +8,21 @@ const About = (props: any) => {
         <Fragment>
       <Modal
         {...props}
-        size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
         <Modal.Header closeButton  className={classes.HeaderFooterStyle}>
           <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
+            Data-Structs
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className={classes.BodyStyle}>
-          <h4>Centered Modal</h4>
+          <h4>Algorithms and Data Structures</h4>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
+            Built by Mo &amp; Vlad, Uk &amp; Russia.
+            This site is still under construction and instruction !
           </p>
+          <p>Version - {props.Version}</p>
         </Modal.Body>
         <Modal.Footer className={classes.HeaderFooterStyle}>
           <Button onClick={props.onHide}>Close</Button>

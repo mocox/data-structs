@@ -14,7 +14,6 @@ import Sorting from './containers/sorting/sorting';
 import DataStructures from './containers/data-structures/data-structures';
 import Profile from './containers/profile/profile';
 
-
 const routes = () => {
   return (
     <Switch> 

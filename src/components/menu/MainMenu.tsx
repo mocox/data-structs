@@ -47,7 +47,7 @@ const MainMenu = (props: any) => {
 
             <About
                 show={modalShow}
-                Version={version}
+                version={version}
                 onHide={() => setModalShow(false)}
             />
 

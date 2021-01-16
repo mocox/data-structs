@@ -7,4 +7,6 @@
     background: linear-gradient(180deg,#a7c7dc 0,#85b2d3);
     font-size: large;
     width: 100%;
+    position: fixed;
+    top: 0;
 }

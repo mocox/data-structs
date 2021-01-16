@@ -22,7 +22,7 @@ const About = (props: any) => {
             Built by Mo &amp; Vlad, Uk &amp; Russia.
             This site is still under construction and instruction !
           </p>
-          <p>Version - {props.Version}</p>
+          <p>Version - {props.version}</p>
         </Modal.Body>
         <Modal.Footer className={classes.HeaderFooterStyle}>
           <Button onClick={props.onHide}>Close</Button>

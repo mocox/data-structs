@@ -14,6 +14,7 @@ import Sorting from './containers/sorting/sorting';
 import DataStructures from './containers/data-structures/data-structures';
 import Profile from './containers/profile/profile';
 
+import Scroll from './components/scroll/Scroll';
 
 const routes = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         
         <Menu version={packageJson.version} />
 
+        <Scroll>
         <div className="body-container">
                 <div className="left-panel">
                     {routes()}  
@@ -55,6 +57,7 @@ const App = () => {
                     </ul>
                 </div>
             </div>
+            </Scroll>
       </div>
     </BrowserRouter>
   );

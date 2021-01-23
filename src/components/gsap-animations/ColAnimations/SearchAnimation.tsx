@@ -17,8 +17,9 @@ const SearchAnimation = () => {
 
     useEffect(() => {
 
-        // gsap.timeline('#block', )
-        gsap.to('.Item', {rotation: 360, x: 100, duration: 2, })        
+        // animate
+        gsap.to('.arrayItem', { rotation: 360, x: 100, duration: 1 });
+        gsap.to('.arrayItem', { rotation: -360, x: 0, duration: 1});        
 
     },[elements]);
 
@@ -33,8 +34,8 @@ const SearchAnimation = () => {
              
     }
 
-        const array: string = elements.join(", ");
-    console.log('array - ', array);
+
+    const array: string = elements.join(", ");
 
     const buildElements = () => {
        return elements.map((x, i)=> {       
@@ -44,7 +45,7 @@ const SearchAnimation = () => {
             const refEl:RefObject<HTMLDivElement> = React.createRef();
             items.push(refEl);
             return (
-                    <div key={i}>
+                    <div key={i} className="arrayItem">
                         <div ref={refEl} id={itemId} className={classes.NumberItem}>{x}</div>
                         <div className={classes.Item} style={heightStyle}></div>
                     </div>
@@ -57,12 +58,11 @@ const SearchAnimation = () => {
     const blockClasses = [classes.Block, 'boxshadow-normal'].join(' ');
     return(        
         <Fragment>
-            <div>Array is : 
-                 <FormGroup className="form-group d-inline-block" >
-                    <input ref={inputRef} id='arrayValue' className="Name" type="text" onKeyPress={changed} defaultValue={array}/> 
-                    <button className="btn btn-default" onClick={changed} />                   
+            <div>Set Array =&gt; 
+                 <FormGroup className="form-group d-inline-block">
+                    <input ref={inputRef} id='arrayValue' className={classes.InputArray} type="text" onKeyPress={changed} defaultValue={array}/>                  
                  </FormGroup> 
-                </div>
+            </div>
             <div id="block" ref={block} className={blockClasses}>
                 {els}
             </div>

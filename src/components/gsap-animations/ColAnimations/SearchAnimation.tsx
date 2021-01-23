@@ -24,7 +24,9 @@ const SearchAnimation = () => {
         // id of last element
         const id: string = '#item_' + (elements.length - 1);
         // animate
-        gsap.fromTo(id, { y: -500, duration: 1 }, { y:0, duration: 1});   
+        gsap.fromTo(id, { y: -500, duration: 1 }, { y:0, duration: 1}); 
+        gsap.to(id, { x: 200, duration: 1, delay: 1 }); 
+        gsap.to(id, { x: 0, duration: 1, delay:2 }); 
        
 
     },[elements]);

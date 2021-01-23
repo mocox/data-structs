@@ -15,8 +15,8 @@ const HomePage = () => {
 
     useEffect(()=>{
         gsap.fromTo('#welcomeHeader', { x: 1500, duration: 0.1, ease: 'bounce' }, { x:0, duration: 1, ease: 'bounce'});
-        gsap.fromTo('#welcomeDesc', { x: 1500, duration: 0.1, ease: 'bounce' }, { x:0, duration: 1, delay: 1, ease: 'bounce'});
-        gsap.fromTo('#welcomeConst', { y: -1500, duration: 0.1, ease: 'bounce' }, { y:0, duration: 1, delay: 2, ease: 'bounce'});
+        gsap.fromTo('#welcomeDesc', { x: 1500, duration: 0.1, ease: 'bounce' }, { x:0, duration: 1, delay: 0.75, ease: 'bounce'});
+        gsap.fromTo('#welcomeConst', { x: 1500, duration: 0.1, ease: 'bounce' }, { x:0, duration: 1, delay: 1, ease: 'bounce'});
     },[]);
 
     return (

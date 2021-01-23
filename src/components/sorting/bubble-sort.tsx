@@ -3,9 +3,10 @@ import {Jumbotron} from 'react-bootstrap';
 import TabbedCode from '../tabbed-code/tabbedcode';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faCode, faGlasses } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './sorting.module.css';
+import SearchAnimation from '../gsap-animations/ColAnimations/SearchAnimation';
 
 const BubbleSort = () => {
 
@@ -25,7 +26,11 @@ const BubbleSort = () => {
                     Introduction
                 </div>
                 <p>Text here</p>
-
+                <div className="subHeader">
+                    <FontAwesomeIcon className="iconClass" icon={faGlasses} color="turquoise" />
+                    Visualisations                   
+                </div>
+                <SearchAnimation />
                 <div className="subHeader">
                     <FontAwesomeIcon className="iconClass" icon={faCode} color="turquoise" />
                     Code Examples

@@ -12,28 +12,29 @@ const SearchAnimation = () => {
     const inputRef: RefObject<HTMLInputElement> = React.createRef();
 
     useEffect(()=>{
-        setElements([10,4,3,8,2]);
+        setElements([10,4,8,2,6]);
     },[]);
 
     useEffect(() => {
 
         // animate
         gsap.to('.arrayItem', { rotation: 360, x: 100, duration: 1 });
-        gsap.to('.arrayItem', { rotation: -360, x: 0, duration: 1 });        
+        gsap.to('.arrayItem', { rotation: -360, x: 0, duration: 1 , delay:1});        
 
     },[elements]);
 
     const changed = (event: any) => {
-        if (inputRef.current?.value.endsWith(',') || inputRef.current?.value.endsWith(' ')) return;
-
-        const values = inputRef.current?.value.split(",");
         
-        var ints = values?.map((n: string) => {
-            return +n;
-        });
+        console.log("Event value - ", event);
+        if (event.charCode === 13 ) {
+            const values = inputRef.current?.value.split(",");
+            
+            var ints = values?.map((n: string) => {
+                return +n;
+            });
 
-        setElements(ints ?? []);
-             
+            setElements(ints ?? []);
+        }
     }
 
 

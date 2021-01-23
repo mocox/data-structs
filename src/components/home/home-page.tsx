@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import { NavLink } from 'react-router-dom';
 
@@ -6,22 +6,30 @@ import classes from './home.module.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import gsap from 'gsap';
 
 const urlName = "learnthis.rocks";
 
 const HomePage = () => {
+
+
+    useEffect(()=>{
+        gsap.fromTo('#welcomeHeader', { x: 1500, duration: 0.1, ease: 'bounce' }, { x:0, duration: 1, ease: 'bounce'});
+        gsap.fromTo('#welcomeDesc', { x: 1500, duration: 0.1, ease: 'bounce' }, { x:0, duration: 1, delay: 1, ease: 'bounce'});
+        gsap.fromTo('#welcomeConst', { y: -1500, duration: 0.1, ease: 'bounce' }, { y:0, duration: 1, delay: 2, ease: 'bounce'});
+    },[]);
 
     return (
 
         <Fragment>
             <Jumbotron fluid className={classes.HeaderTron}>
                 <div className={classes.HeaderContainer}>
-                    <h1>Welcome to <span className="url-name">{urlName}</span> Data Structures</h1>
-                    <p>
+                    <h1 id='welcomeHeader'>Welcome to <span className="url-name">{urlName}</span> Data Structures</h1>
+                    <p id="welcomeDesc">
                         A website created by <NavLink to="/profile/mo">Mo Cox</NavLink> and <em>Vlad Chelyadin</em>.
                         A cooperation between London, UK and Saint Petersburg, Russia.
                     </p>
-                    <p>
+                    <p id='welcomeConst'>
                         <strong>We are still under construction so please be patient.</strong>
                     </p>
                 </div>

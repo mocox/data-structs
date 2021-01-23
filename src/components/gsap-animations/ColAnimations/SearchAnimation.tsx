@@ -19,11 +19,13 @@ const SearchAnimation = () => {
 
         // animate
         gsap.to('.arrayItem', { rotation: 360, x: 100, duration: 1 });
-        gsap.to('.arrayItem', { rotation: -360, x: 0, duration: 1});        
+        gsap.to('.arrayItem', { rotation: -360, x: 0, duration: 1 });        
 
     },[elements]);
 
     const changed = (event: any) => {
+        if (inputRef.current?.value.endsWith(',') || inputRef.current?.value.endsWith(' ')) return;
+
         const values = inputRef.current?.value.split(",");
         
         var ints = values?.map((n: string) => {

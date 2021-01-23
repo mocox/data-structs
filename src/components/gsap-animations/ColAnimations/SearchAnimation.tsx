@@ -5,16 +5,15 @@ import { FormGroup } from 'react-bootstrap';
 import classes from './searchanimation.module.css';
 
 const SearchAnimation = () => {
-    const [elements, setElements] = useState<Number[]>([]);
+    const [elements, setElements] = useState<Number[]>([10,4,8,2,6]);
 
     const block:RefObject<HTMLDivElement> = React.createRef();
     const items:RefObject<HTMLDivElement>[] = [];
     const inputRef: RefObject<HTMLInputElement> = React.createRef();
 
     useEffect(()=>{
-        setElements([10,4,8,2,6]);
-
-        gsap.fromTo('.arrayItem', { y: -500, duration: 1, ease: 'bounce' }, { y:0, duration: 1, ease: 'bounce'});
+        
+        gsap.from('.arrayItem', { y: -800, duration: 1, ease: 'bounce', opacity:0, stagger: 0.1 });
 
     },[]);
 
@@ -22,11 +21,8 @@ const SearchAnimation = () => {
 
         // id of last element
         const id: string = '#item_' + (elements.length - 1);
-        // animate
-        gsap.fromTo(id, { y: -500, duration: 1, ease: 'bounce'}, { y:0, duration: 1, ease:'bounce'}); 
-        gsap.to(id, { x: 200, duration: 1, delay: 1 }); 
-        gsap.to(id, { x: 0, duration: 1, delay:2 }); 
-       
+        
+        gsap.fromTo(id, { x: -400, duration: 0.1, opacity:0 }, { x: 0, duration: 1, delay:1, opacity:1 });        
 
     },[elements]);
 

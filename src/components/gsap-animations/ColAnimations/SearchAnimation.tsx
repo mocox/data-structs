@@ -13,19 +13,24 @@ const SearchAnimation = () => {
 
     useEffect(()=>{
         setElements([10,4,8,2,6]);
+
+        gsap.to('.arrayItem', { rotation: 360, x: 100, duration: 1 });
+        gsap.to('.arrayItem', { rotation: -360, x: 0, duration: 1 , delay:1});     
+
     },[]);
 
     useEffect(() => {
 
+        // id of last element
+        const id: string = '#item_' + (elements.length - 1);
         // animate
-        gsap.to('.arrayItem', { rotation: 360, x: 100, duration: 1 });
-        gsap.to('.arrayItem', { rotation: -360, x: 0, duration: 1 , delay:1});        
+        gsap.fromTo(id, { y: -500, duration: 1 }, { y:0, duration: 1});   
+       
 
     },[elements]);
 
     const changed = (event: any) => {
         
-        console.log("Event value - ", event);
         if (event.charCode === 13 ) {
             const values = inputRef.current?.value.split(",");
             
@@ -48,8 +53,8 @@ const SearchAnimation = () => {
             const refEl:RefObject<HTMLDivElement> = React.createRef();
             items.push(refEl);
             return (
-                    <div key={i} className="arrayItem">
-                        <div ref={refEl} id={itemId} className={classes.NumberItem}>{x}</div>
+                    <div id={itemId} key={i} className="arrayItem">
+                        <div ref={refEl} className={classes.NumberItem}>{x}</div>
                         <div className={classes.Item} style={heightStyle}></div>
                     </div>
                 );
@@ -64,7 +69,8 @@ const SearchAnimation = () => {
             <div>Set Array =&gt; 
                  <FormGroup className="form-group d-inline-block">
                     <input ref={inputRef} id='arrayValue' className={classes.InputArray} type="text" onKeyPress={changed} defaultValue={array}/>                  
-                 </FormGroup> 
+                 </FormGroup>
+                 <span> (Enter values then press 'enter' key)</span> 
             </div>
             <div id="block" ref={block} className={blockClasses}>
                 {els}

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faCode, faGlasses } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './sorting.module.css';
-import SearchAnimation from '../gsap-animations/ColAnimations/SearchAnimation';
+import BubbleSortAnimation from '../gsap-animations/ColAnimations/BubbleSortAnimation';
 
 const BubbleSort = () => {
 
@@ -30,7 +30,7 @@ const BubbleSort = () => {
                     <FontAwesomeIcon className="iconClass" icon={faGlasses} color="turquoise" />
                     Visualisations                   
                 </div>
-                <SearchAnimation />
+                <BubbleSortAnimation/>
                 <div className="subHeader">
                     <FontAwesomeIcon className="iconClass" icon={faCode} color="turquoise" />
                     Code Examples

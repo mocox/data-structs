@@ -1,7 +1,6 @@
 import gsap from 'gsap';
 import React, { Fragment, RefObject, useEffect, useState } from 'react';
 import { FormGroup } from 'react-bootstrap';
-import { createIndexedAccessTypeNode } from 'typescript';
 
 import classes from './BubbleSortAnimation.module.css';
 
@@ -12,56 +11,52 @@ const BubleSortAnimation = (props: any) => {
     const items:RefObject<HTMLDivElement>[] = [];
     const inputRef: RefObject<HTMLInputElement> = React.createRef();    
 
-    const BubbleSort = () => {
+    let elByClass = document.getElementsByClassName('arrayItem');
 
-        const els = document.getElementsByClassName('arrayItem');
+    const BubbleSort = () => {        
         
         let index = 0;
-        while (index < elements.length-1) {
-            
-            
-            for (let j = 0; j < els.length-1; j ++) {
+        while (index < elements.length-1) {            
+            elByClass = document.getElementsByClassName('arrayItem');
+            //get current element
+            const [currentElement, value] = getNextElement(0);
 
-                //get current element
-                const currentElement = els[j];
-                const elIndex = currentElement.id.split('_')[1];
-
-                // current
-                const numElement = document.getElementById('num_' + elIndex);
-                const value: number = Number.parseInt(numElement?.innerHTML ??'0');
+            for (let j = 1; j < els.length; j ++) {                
                 
                 // next
-                const nextElement = els[j+1];
-                const nextNumElement = document.getElementById('num_' + j+1);
-                const nextValue: number = Number.parseInt(nextNumElement?.innerHTML ?? '0');
-                
+                const [nextElement, nextValue] = getNextElement(j);
+                                
                 console.log('currentvalue - nextValue -> ', value, nextValue);
+
                 if (value > nextValue) {
-                    Swap(currentElement, nextElement, els, j);
+                    Swap(currentElement, nextElement, j);
                 }
             }
 
-            // index = elements.length;
-            index ++;
-        }
-
-        
+            //index = elements.length;
+             index ++;
+        }        
     }
 
-    const Swap = (a: Element, b: Element, els: any, currentIndex: number) => {
+    const Swap = (a: Element, b: Element, currentIndex: number) => {
 
-        console.log('swapping -> index ->', currentIndex);
+        console.log('swapping -> index ->', currentIndex, b);
         
-        
+        gsap.to(a, {x: 35*currentIndex, duration: 1});
         gsap.to(b, {x:-35, duration: 1});
-        gsap.to(a, {x:35, duration: 1});
-
-        for (let i = currentIndex + 1; i < els.length; i++){
-            gsap.to(els[i], {x:0, duration: 1, delay: 1});
-        }
-        
+    
     }
     
+    const getNextElement = (index: number): [Element, number] => {
+        //
+        const element = elByClass[index];
+        const elIndex = element.id.split('_')[1];
+        const nextNumElement = document.getElementById('num_' + elIndex);
+        const nextValue: number = Number.parseInt(nextNumElement?.innerHTML ?? '0');
+
+        return [element, nextValue];
+    }
+
     useEffect(()=>{
         
         gsap.from('.arrayItem', { y: -800, duration: 1, ease: 'bounce', opacity:0, stagger: 0.1 });
@@ -119,7 +114,7 @@ const BubleSortAnimation = (props: any) => {
                  );
          });
      };
-     
+    
     let els: JSX.Element[] = buildElements();
 
     const blockClasses = [classes.Block, 'boxshadow-normal'].join(' ');
